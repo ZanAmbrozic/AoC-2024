@@ -22,8 +22,8 @@ for line in open("input.txt"):
         # check if used is a subset of required updates
         # if it is, it means that requirements are not met and updates are not in order
         # part 1 only needs break in if statement body
-        if used < (conditions.get(update, set()) & set(updates)):
-            ordered = sorted(updates, key=lambda e: len(set(updates) & conditions.get(e, set())))
+        if used < (conditions[update] & set(updates)):
+            ordered = sorted(updates, key=lambda e: len(set(updates) & conditions[e]))
             res2 += int(ordered[len(ordered) // 2])
             break
 
