@@ -16,7 +16,7 @@ for i, line in enumerate(open("input.txt")):
     max_coor = (len(line) - 1, i)
 
     if "^" in line:
-        curr_pos = [(line.find("^"), i)]
+        curr_pos = [(line.find("^"), i), 0]
         start_pos = curr_pos.copy()
 
 
