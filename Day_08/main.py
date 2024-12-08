@@ -41,17 +41,3 @@ antinodes = set(filter(lambda e: 0 <= e[0] <= max_coor[0] and 0 <= e[1] <= max_c
 print(len(antinodes))
 
 
-
-def debugger():
-    for i in range(max_coor[1]):
-        for j in range(max_coor[0]):
-            if (j, i) in sum(nodes.values(), []):
-                print("0", end="")
-            elif (j, i) in antinodes:
-                print("#", end="")
-
-            else:
-                print(".", end="")
-        print()
-
-
